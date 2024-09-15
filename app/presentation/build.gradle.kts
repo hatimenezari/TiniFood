@@ -2,6 +2,8 @@ plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 composeCompiler {
@@ -64,4 +66,17 @@ dependencies {
 
     //image handling
     implementation("io.coil-kt:coil-compose:2.7.0")
+
+    //hilt
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    kapt("com.google.dagger:hilt-compiler:2.51.1")
+
+    //viewmodel-compose
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.5")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }
