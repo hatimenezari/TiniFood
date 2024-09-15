@@ -1,6 +1,6 @@
 package screens.home.components
 
-import Promo
+import Promotion
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.height
@@ -13,15 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun PromoCarousel(modifier: Modifier) {
-
-    //TODO fetch list
-    val promos = mutableListOf(
-        Promo(1),
-        Promo(2),
-        Promo(3),
-        Promo(4)
-    )
+fun PromoCarousel(modifier: Modifier, promotions: List<Promotion>) {
 
     val state = rememberLazyListState()
 
@@ -36,7 +28,7 @@ fun PromoCarousel(modifier: Modifier) {
             end = 16.dp
         )
     ) {
-        items(promos, key = { it.id }) { promo ->
+        items(promotions, key = { it.id }) { promo ->
             PromoCard(promo)
         }
     }

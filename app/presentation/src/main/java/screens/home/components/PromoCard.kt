@@ -1,6 +1,6 @@
 package screens.home.components
 
-import Promo
+import Promotion
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -8,9 +8,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import coil.compose.AsyncImage
 
 @Composable
-fun PromoCard(promo: Promo, modifier: Modifier = Modifier) {
+fun PromoCard(promotion: Promotion, modifier: Modifier = Modifier) {
     AsyncImage(
-        model = promo.uri,
+        model = promotion.uri,
         contentDescription = null,
         modifier = modifier.fillMaxSize()
     )
@@ -19,5 +19,5 @@ fun PromoCard(promo: Promo, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun PromoCardPreview() {
-    PromoCard(Promo(9))
+    PromoCard(Promotion(9))
 }
