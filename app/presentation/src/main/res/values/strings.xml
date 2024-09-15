@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cd_home_icon">home icon</string>
+    <string name="cd_store_icon">store icon</string>
+    <string name="cd_order_icon">order icon</string>
+    <string name="cd_profile_icon">profile icon</string>
+    <string name="cd_plate_logo">plate logo</string>
+    <string name="welcome_home">"\n            Welcome to\n            <b>Sample restaurant</b>\n        "</string>
+    <string name="cd_store_image">store image</string>
+    <string name="store_pickup">Store pickup</string>
+    <string name="cd_bike_image">bike image</string>
+</resources>
