@@ -15,7 +15,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "TiniFood"
 include(":app")
-include(":app:TiniDI")
 include(":app:presentation")
 include(":app:domain")
 include(":app:data")
