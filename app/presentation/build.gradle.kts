@@ -4,6 +4,8 @@ plugins {
     id("org.jetbrains.kotlin.plugin.compose")
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
+    id("kotlin-parcelize")
+    kotlin("plugin.serialization") version "2.0.20"
 }
 
 composeCompiler {
@@ -74,6 +76,10 @@ dependencies {
     //viewmodel-compose
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.5")
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+
+    //navigation
+    implementation("androidx.navigation:navigation-compose:2.8.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.1")
 }
 
 // Allow references to generated code
