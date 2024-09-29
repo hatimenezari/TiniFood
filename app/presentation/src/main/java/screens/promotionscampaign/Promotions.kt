@@ -23,6 +23,7 @@ fun Promotions(
     modifier: Modifier = Modifier,
     paddingValues: PaddingValues,
 ) {
+    //TODO GET VIA VIEWMODEL
     val promotions = listOf(
         Promotion(
             10,
@@ -62,7 +63,7 @@ fun Promotions(
         verticalArrangement = Arrangement.spacedBy(8.dp),
         modifier = modifier.padding(16.dp)
     ) {
-        Text(text = "Promotion campaign", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+        Text(text = "Promotion campaign", fontWeight = FontWeight.Bold, fontSize = 24.sp)
         LazyVerticalGrid(
             columns = GridCells.Adaptive(156.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp),
