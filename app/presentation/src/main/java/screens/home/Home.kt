@@ -5,6 +5,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -16,6 +18,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import components.TopAppBar
 import screens.home.components.PromoCarousel
 import screens.home.components.QualityAd
+import screens.home.components.ReservationCard
 
 
 @Composable
@@ -24,6 +27,7 @@ fun Home(
     paddingValues: PaddingValues,
     viewModel: HomeViewModel = hiltViewModel()
 ) {
+    val scrollState = rememberScrollState()
 
     val promotions by viewModel.promotions.collectAsState()
 
@@ -31,12 +35,14 @@ fun Home(
         verticalArrangement = Arrangement.spacedBy(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = modifier
+            .verticalScroll(scrollState)
             .padding(paddingValues)
             .fillMaxSize()
     ) {
         TopAppBar(modifier = modifier)
         PromoCarousel(modifier = modifier, promotions)
         QualityAd(modifier = modifier)
+        ReservationCard(modifier = modifier)
     }
 }
 

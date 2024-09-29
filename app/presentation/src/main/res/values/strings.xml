@@ -9,4 +9,7 @@
     <string name="cd_store_image">store image</string>
     <string name="store_pickup">Store pickup</string>
     <string name="cd_bike_image">bike image</string>
+    <string name="online_reservation">Online reservation</string>
+    <string name="table_booking">Table booking</string>
+    <string name="cd_table_logo">table logo</string>
 </resources>
