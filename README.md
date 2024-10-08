@@ -18,7 +18,7 @@ The app utilizes the following architecture components:
 - **Repository Pattern**: Data access is managed through repositories, providing a clean API for data access to the rest of the application.
 - **Use Cases**: Use cases encapsulate business logic, keeping ViewModels lean and focused on UI-related tasks.
 - **Flow**: Kotlin Flow is used for handling asynchronous data streams, enabling reactive programming within the app.
-- **Retrofit**: Network calls are implemented using Retrofit, facilitating API interactions. (wip)
+- **Retrofit**: Network calls are implemented using Retrofit, facilitating API interactions. 
 
 ## Modules
 
@@ -33,6 +33,6 @@ The app utilizes the following architecture components:
 - Responsive UI built using Jetpack Compose
 - Dependency injection with Hilt
 - Local data storage using Room
-- API interactions via Retrofit (wip)
+- API interactions via Retrofit 
 - Flow for reactive programming
 

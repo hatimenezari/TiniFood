@@ -3,8 +3,9 @@ package usecase
 import Promotion
 import repository.PromotionRepository
 import toDomainModel
+import javax.inject.Inject
 
-class GetPromotionsUseCase(private val repository: PromotionRepository) {
+class GetPromotionsUseCase @Inject constructor(private val repository: PromotionRepository) {
     suspend operator fun invoke(): List<Promotion> {
         // Prepopulate database if empty
         repository.prepopulateDatabase()
