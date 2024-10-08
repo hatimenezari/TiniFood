@@ -1,4 +1,5 @@
 import datasource.local.entities.PromotionEntity
+import datasource.remote.entities.PromotionApiEntity
 
 data class Promotion(
     val id: Int,
@@ -9,4 +10,7 @@ data class Promotion(
 )
 
 fun PromotionEntity.toDomainModel() = Promotion(id, uri)
+fun PromotionApiEntity.toDomainModel() =
+    Promotion(id ?: 0, uri.orEmpty(), description.orEmpty(), startDate ?: "-", endDate ?: "?")
+
 fun Promotion.toEntity() = PromotionEntity(id, uri)
